@@ -275,9 +275,10 @@ def get_nist_vendor_platform_urls(vendor: str, platform: str, version: str) -> t
         >>>
     """
     platform_data = _os_platform_object_builder(vendor, platform, version).__dict__
+    get_nist_urls_func = get_nist_url_funcs.get(vendor.lower(), {}).get(platform.lower())
 
-    if vendor.lower() == "juniper" and platform.lower() == "junos":
-        return _get_nist_urls_juniper_junos(platform_data)
+    if get_nist_urls_func:
+        return get_nist_urls_func(platform_data)
     return _get_nist_urls_default(platform_data)
 
 
