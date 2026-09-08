@@ -558,6 +558,7 @@ NIST_LIB_MAPPER: t.Dict[str, str] = {
     "cisco:nx-os": "cisco_nxos",
     "cisco:ios_xe": "cisco_xe",
     "cisco:ios_xr": "cisco_xr",
+    "hpe:arubaos-cx": "aruba_aoscx",
     "juniper:junos": "juniper_junos",
     "paloaltonetworks:pan-os": "paloalto_panos",
 }
@@ -741,6 +742,7 @@ LIBRENMS_LIB_MAPPER_REVERSE: t.Dict[str, str] = {
 # Normalized | NIST
 NIST_LIB_MAPPER_REVERSE: t.Dict[str, str] = {
     "arista_eos": "arista:eos",
+    "aruba_aoscx": "hpe:arubaos-cx",
     "aruba_os": "arubanetworks:arubaos",
     "cisco_asa": "cisco:adaptive_security_appliance_software",
     "cisco_ios": "cisco:ios",
@@ -832,7 +834,7 @@ NAME_TO_LIB_MAPPER_REVERSE: t.Dict[str, t.Dict[str, str]] = {
     "ncclient": NCCLIENT_LIB_MAPPER_REVERSE,
     "netmiko": NETMIKO_LIB_MAPPER_REVERSE,
     "netutils_parser": NETUTILSPARSER_LIB_MAPPER_REVERSE,
-    "nist": NIST_LIB_MAPPER_REVERSE,
+    "nist": _REVERSE,
     "ntc_templates": NTCTEMPLATES_LIB_MAPPER_REVERSE,
     "pyats": PYATS_LIB_MAPPER_REVERSE,
     "pyntc": PYNTC_LIB_MAPPER_REVERSE,
