@@ -834,7 +834,7 @@ NAME_TO_LIB_MAPPER_REVERSE: t.Dict[str, t.Dict[str, str]] = {
     "ncclient": NCCLIENT_LIB_MAPPER_REVERSE,
     "netmiko": NETMIKO_LIB_MAPPER_REVERSE,
     "netutils_parser": NETUTILSPARSER_LIB_MAPPER_REVERSE,
-    "nist": _REVERSE,
+    "nist": NIST_LIB_MAPPER_REVERSE,
     "ntc_templates": NTCTEMPLATES_LIB_MAPPER_REVERSE,
     "pyats": PYATS_LIB_MAPPER_REVERSE,
     "pyntc": PYNTC_LIB_MAPPER_REVERSE,
